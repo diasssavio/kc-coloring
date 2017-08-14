@@ -51,6 +51,22 @@ void instance::read_data() {
 	}
 }
 
+void instance::read_from_file( char* filename ) {
+	ifstream _file;
+  _file.open(filename, std::ifstream::in);
+
+  if(_file.is_open()) {
+		_file >> n >> m; //>> k >> c >> R;
+
+		edges = vector< edge >(m);
+		for(int e = 0; e < m; e++) {
+			int v1, v2;
+			_file >> v1 >> v2;
+			edges[e] = make_pair(v1, v2);
+		}
+	}
+}
+
 void instance::show_data() {
 	printf("Number of vertices & edges: %d %d\n", n, m);
 	printf("Number (k,c) = (%d, %d) & |R| = %d\n", k, c, R);

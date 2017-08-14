@@ -82,6 +82,7 @@ clean:
 	/bin/rm -rf ./dat
 	/bin/rm -rf *.lp
 	/bin/rm -rf cutset.txt
+	/bin/rm -rf results.csv
 
 ########################## GENERATING OBJECT's ######################################################
 

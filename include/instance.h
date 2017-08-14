@@ -52,6 +52,7 @@ public:
 
 	// Useful Methods
 	void read_data();
+	void read_from_file( char* );
 	void show_data();
 };
 
